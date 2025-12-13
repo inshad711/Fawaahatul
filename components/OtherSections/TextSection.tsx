@@ -62,7 +62,7 @@ const TextBlock: FC<TextBlockProps> = ({ content, bgColor, bgImage, textColor = 
             className={`
                 flex items-center justify-center
                 h-1/3 w-full md:h-full md:w-1/3
-                ${textColor} text-5xl md:text-6xl cormorantGaramondSubheading lg:text-8xl font-black relative overflow-hidden
+                ${textColor} text-4xl md:text-5xl cormorantGaramondSubheading lg:text-7xl font-black relative overflow-hidden
                 ${!bgImage ? bgColor : 'bg-gray-900'}
             `}
             style={backgroundStyle}
@@ -101,7 +101,7 @@ export default function TextSection() {
         {
             content: 'First',
             bgImage:
-                'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://oudattar.co.uk/cdn/shop/products/119v.jpg?pad_color=fff&v=1681209014&width=940',
             bgColor: 'bg-[#7e05d7]',
             textColor: 'text-white',
             index: 1,
@@ -110,14 +110,14 @@ export default function TextSection() {
             content: 'Look',
             bgColor: 'bg-[#f21e56]',
             bgImage:
-                'https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png',
+                'https://oudattar.co.uk/cdn/shop/products/138-2.jpg?pad_color=fff&v=1681209151&width=940',
             textColor: 'text-white',
             index: 2,
         },
         {
             content: 'Last',
             bgImage:
-                'https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://oudattar.co.uk/cdn/shop/products/395-small.jpg?pad_color=fff&v=1647853215&width=940',
             bgColor: 'bg-[#bd04a9]',
             textColor: 'text-white',
             index: 3,
