@@ -243,7 +243,9 @@ const OnlyEmailVerify = () => {
     <div className="space-y-4">
       <div id="recaptcha-container"></div>
       <div className="flex items-center justify-between">
-        <h2 className="text-[20px] lg:text-[22px] text-gray-800">Contact</h2>
+        <h2 className="text-[20px] lg:text-[22px] text-templateText">
+          Contact
+        </h2>
         {!customerData && (
           <Link href="/auth/login" className="text-sm underline">
             Login
@@ -274,9 +276,13 @@ const OnlyEmailVerify = () => {
               {verified ? (
                 <CircleCheckBig size={18} color="green" />
               ) : (
-                <Button type="submit" disabled={!isValid || otpSent || loading}>
+                <button
+                  type="submit"
+                  className="w-36 h-11 rounded-md bg-templateText text-templateBackground"
+                  disabled={!isValid || otpSent || loading}
+                >
                   Get OTP
-                </Button>
+                </button>
               )}
             </>
           )}

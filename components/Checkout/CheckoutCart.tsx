@@ -177,15 +177,17 @@ const CheckoutCart: React.FC = () => {
           }`}
         ></div>
         <div
-          className={` w-full space-y-2 pt-4 pb-2 bg-white duration-300 rounded-t-2xl fixed bottom-0 left-0 border-t ${
+          className={` w-full space-y-2 pt-4 pb-2 bg-templateBackground duration-300 rounded-t-2xl fixed bottom-0 left-0 border-t ${
             openSummary ? "translate-y-0" : "translate-y-full"
           }`}
         >
-          <h2 className="text-center text-lg font-medium">Order Summary</h2>
+          <h2 className="text-center text-lg font-medium text-templateText">
+            Order Summary
+          </h2>
           <RenderCartDetails />
         </div>
       </div>
-      <OptionModal />
+      {/* <OptionModal /> */}
     </>
   );
 };

@@ -124,30 +124,24 @@ export const sortByList = [
 ];
 
 export async function detectLocation() {
-  return {
-    countryName: "India",
-    countryCode: "IN",
-    countryCallingCode: "+91",
-    currency: "INR",
-  };
-  // try {
-  //   const res = await fetch("https://ipapi.co/json/");
-  //   const data = await res.json();
+  try {
+    const res = await fetch("https://ipapi.co/json/");
+    const data = await res.json();
 
-  //   return {
-  //     countryName: data.country_name || "India",
-  //     countryCode: data.country || "IN",
-  //     countryCallingCode: data.country_calling_code || "+91",
-  //     currency: data.currency || "INR",
-  //   };
-  // } catch (error) {
-  //   return {
-  //     countryName: "India",
-  //     countryCode: "IN",
-  //     countryCallingCode: "+91",
-  //     currency: "INR",
-  //   };
-  // }
+    return {
+      countryName: data.country_name || "United States",
+      countryCode: data.country || "US",
+      countryCallingCode: data.country_calling_code || "+1",
+      currency: data.currency || "USD",
+    };
+  } catch (error) {
+    return {
+      countryName: "United States",
+      countryCode: "US",
+      countryCallingCode: "+1",
+      currency: "USD",
+    };
+  }
 }
 
 export const calculateInternationalShipping = (

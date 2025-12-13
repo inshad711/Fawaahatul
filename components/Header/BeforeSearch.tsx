@@ -47,8 +47,8 @@ const BeforeSearch = ({ setSearchValue }: { setSearchValue: any }) => {
     <div className="space-y-5 min-h-full !z-50 lg:min-h-auto h-full w-full overflow-y-auto px-4 pt-6 pb-36 lg:pb-6">
       <div className="space-y-2.5">
         <div className="flex items-center gap-2">
-          <ChartNoAxesCombined size={17} className="text-templateText" />
-          <h2 className="text-xs tracking-wide font-medium text-templateText">
+          <ChartNoAxesCombined size={17} className="text-black" />
+          <h2 className="text-xs tracking-wide font-medium text-black">
             Trending Searches
           </h2>
         </div>
@@ -62,7 +62,7 @@ const BeforeSearch = ({ setSearchValue }: { setSearchValue: any }) => {
                 >
                   {item?.query}{" "}
                   <span className="flex items-center gap-1">
-                    <TrendingUp size={14} className="text-templateText" />
+                    <TrendingUp size={14} className="text-black" />
                     {item?.total_searches}
                   </span>
                 </button>
@@ -81,8 +81,8 @@ const BeforeSearch = ({ setSearchValue }: { setSearchValue: any }) => {
       {results?.recommended?.length > 0 ? (
         <div className="space-y-2.5">
           <div className="flex items-center gap-2">
-            <Flame size={17} className="text-templateText" />
-            <h2 className="text-xs tracking-wide font-medium text-templateText">
+            <Flame size={17} className="text-black" />
+            <h2 className="text-xs tracking-wide font-medium text-black">
               Recommended For You
             </h2>
           </div>

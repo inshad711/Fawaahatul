@@ -10,6 +10,8 @@ interface GlobalSetting {
   };
   exchangeRate: {
     usd: number;
+    sar: number;
+    aed: number;
   };
 }
 

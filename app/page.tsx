@@ -56,7 +56,7 @@ const Home = () => {
     <>
       <h1 className="hidden">Hutz Diecast | Original Diecast Collector Toys</h1>
       <div className="bg-templateBackground">
-        <div className="-mt-[105px]">
+        <div className="-mt-[125px]">
           <BannerWrapper />
           {/* <HeroSlider /> */}
         </div>

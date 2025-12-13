@@ -28,7 +28,7 @@ const NewCheckoutCartCard: React.FC<Props> = ({ cartData }) => {
   const { currency } = useSelector((state: RootState) => state.newCheckout);
   const { formatAmount } = useFormatAmount();
   return (
-    <div className="relative pointer-events-none lg:pointer-events-auto  hover:bg-gray-100 rounded p-2">
+    <div className="relative pointer-events-none lg:pointer-events-auto rounded p-2">
       <div className="flex items-center gap-2.5">
         {/* Product Image with Quantity Badge */}
         <div className={`relative w-8 h-10 lg:w-11 lg:h-14`}>

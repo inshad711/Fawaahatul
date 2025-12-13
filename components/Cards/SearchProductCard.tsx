@@ -33,14 +33,14 @@ const SearchProductCard: React.FC<Props> = ({ item, handleClick }) => {
           width={300}
         />
       </div>
-      <h2 className="text-xs group-hover:text-templatePrimary line-clamp-2 tracking-wider text-templateText">
+      <h2 className="text-xs group-hover:text-templatePrimary line-clamp-2 tracking-wider text-black">
         {item?.name && item.name}
       </h2>
       <div className="flex gap-2 text-templateText">
         <span className="text-xs text-green-600 tracking-wide font-medium">
           {item?.price && formatAmount(item.price)}
         </span>
-        <span className="text-[0.7rem] line-through text-gray-500 tracking-wide">
+        <span className="text-[0.7rem] line-through text-black tracking-wide">
           {item?.regular_price && formatAmount(item.regular_price)}
         </span>
       </div>

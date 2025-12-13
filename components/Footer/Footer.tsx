@@ -157,7 +157,7 @@ const Footer: React.FC<Props> = ({ logoSettings, headerMenu }) => {
           <Link href="/" className="inline-block">
             <Image
               className={`w-full h-[80px] object-contain filter invert brightness-0`}
-              src={`${process.env.BACKEND}/upload/WebsiteLogos/${logoSettings?.logoPath}`}
+              src={`/assets/perfumeImage/fawaahlogo.webp`}
               alt={logoSettings?.altText || "Logo"}
               height={500}
               width={460}

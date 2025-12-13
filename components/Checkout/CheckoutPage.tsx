@@ -33,6 +33,7 @@ import EmailContactVerify from "./EmailContactVerify";
 import { cartService } from "@/services/cartService";
 import OnlyEmailVerify from "../NewCheckout/OnlyEmailVerify";
 import Link from "next/link";
+import StripePayment from "./StripePayment";
 
 const CheckoutPage = () => {
   const router = useRouter();
@@ -249,7 +250,7 @@ const CheckoutPage = () => {
                       className="block gap-4 flex-col items-center justify-center"
                     >
                       <Image
-                        src={`${process.env.BACKEND}/upload/WebsiteLogos/${globalSetting?.logoSettings?.logoPath}`}
+                        src={`/assets/perfumeImage/fawaahlogo.webp`}
                         className="hidden lg:block w-20 h-auto object-contain"
                         alt={
                           `${globalSetting?.logoSettings?.altText}` || "Logo"
@@ -262,7 +263,7 @@ const CheckoutPage = () => {
                     <div>
                       <button
                         onClick={() => router.back()}
-                        className="flex items-center gap-2 text-sm hover:underline underline-offset-4"
+                        className="flex items-center text-templateText gap-2 text-sm hover:underline underline-offset-4"
                       >
                         <ArrowLeft size={14} strokeWidth={1.5} /> Go Back
                       </button>
@@ -273,14 +274,16 @@ const CheckoutPage = () => {
                     {showShippingAddress && <CheckoutShippingAddress />}
                     {/* {true && <CheckoutShippingAddress />} */}
                     {/* {true && <NewShippingMethod />} */}
-                    {showPaymentMethod && <NewPaymentMethod />}
+                    {/* {showPaymentMethod && <NewPaymentMethod />} */}
+                    {showPaymentMethod && <StripePayment />}
                     {/* {true && <NewPaymentMethod />} */}
-                    {selectedPaymentMethod && <PayButton />}
+                    {/* {selectedPaymentMethod && <PayButton />} */}
+                    {/* {selectedPaymentMethod && <StripePayment />} */}
                   </div>
                   <div className="w-full space-y-0 lg:space-y-5 lg:w-[43%] lg:sticky top-8 h-full xl:pl-10">
                     <div className="flex items-center justify-center lg:hidden">
                       <Image
-                        src={`${process.env.BACKEND}/upload/WebsiteLogos/${globalSetting?.logoSettings?.logoPath}`}
+                        src={`/assets/perfumeImage/fawaahlogo.webp`}
                         className="w-36 h-auto object-contain"
                         alt={
                           `${globalSetting?.logoSettings?.altText}` || "Logo"

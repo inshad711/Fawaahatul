@@ -34,7 +34,7 @@ const NewPaymentMethod = () => {
   if (OnlyActivePaymentMethod?.length === 0)
     return (
       <div className="max-w-full mx-auto space-y-2">
-        <h2 className="text-[20px] lg:text-[22px] text-gray-800 font-medium">
+        <h2 className="text-[20px] lg:text-[22px] text-templateText font-medium">
           Payment Method
         </h2>
         <p>No Payment Method Available</p>

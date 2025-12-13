@@ -58,7 +58,7 @@ const BottomTabs = ({ headerMenu }: { headerMenu: any }) => {
           onClick={() => dispatch(setOpenMenu(true))}
           className={`lg:hidden grid gap-1 place-content-center place-items-center`}
         >
-          <RiMenu4Fill size={20} color="#242424" />
+          <RiMenu4Fill size={20} color="#fff" />
           <span className="text-xs leading-none tracking-wider">Menu</span>
         </div>
       </div>

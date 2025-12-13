@@ -156,14 +156,14 @@ const CheckoutShippingAddress = () => {
     disabled: boolean = false
   ) => (
     <div className="w-full space-y-1">
-      <Label htmlFor={id} className="text-xs text-gray-600 block">
+      <Label htmlFor={id} className="text-xs text-templateText block">
         {label}
       </Label>
       <Select
         id={id}
-        disabled={disabled}
+        // disabled={disabled}
         showSearch
-        className={inputClass}
+        className={`${inputClass} !text-white`}
         value={value}
         onChange={(val) => handleChange(fieldName, val)}
         filterOption={(input, option: any) =>
@@ -188,7 +188,7 @@ const CheckoutShippingAddress = () => {
     <div className="space-y-4">
       {/* {JSON.stringify(initialData)} */}
       {/* {JSON.stringify(cartData)} */}
-      <h2 className="text-[20px] lg:text-[22px] text-gray-800 font-medium">
+      <h2 className="text-[20px] lg:text-[22px] text-templateText font-medium">
         Shipping Address
       </h2>
 
@@ -291,7 +291,7 @@ const CheckoutShippingAddress = () => {
             shippingAddress?.countryCode || geoLocation?.countryCallingCode
           }
           placeholder="+91"
-          className={`h-10 w-1/4 placeholder:text-gray-100`}
+          className={`h-10 bg-white w-1/4 !text-white placeholder:text-gray-100`}
           value={
             shippingAddress?.countryCode || geoLocation?.countryCallingCode
           }

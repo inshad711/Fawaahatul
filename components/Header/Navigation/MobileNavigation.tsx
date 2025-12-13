@@ -66,7 +66,7 @@ const MobileNavigation: React.FC<Props> = ({ headerMenu, text, variation }) => {
         <div className="flex items-center justify-between shadow-md px-4 py-2">
           <ImageWithFallback
             className="h-auto w-[100px] logotransbg object-contain"
-            src={`${process.env.BACKEND}/upload/WebsiteLogos/${globalSetting?.logoSettings?.logoPath}`}
+            src={`/assets/perfumeImage/fawaahlogo.webp`}
             alt={`${process.env.STORE_NAME}` || "Logo"}
             sizes={"100vw"}
             height={500}

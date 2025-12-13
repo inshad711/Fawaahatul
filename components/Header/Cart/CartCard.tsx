@@ -96,7 +96,7 @@ const CartCard: React.FC<Props> = ({ item }) => {
   };
 
   return (
-    <div className="flex relative gap-2  hover:bg-gray-50 py-3 px-5 group">
+    <div className="flex relative gap-2 py-3 px-5 group">
       <div className="h-[70px] border w-[65px] overflow-hidden">
         <ImageWithFallback
           src={`${process.env.BACKBLAZE_URL}/${item?.image.url}`}
@@ -112,7 +112,7 @@ const CartCard: React.FC<Props> = ({ item }) => {
           {item?.title}
         </h2>
         <div className="flex items-center justify-between">
-          <div className="flex items-center border w-auto p-1 bg-white">
+          <div className="flex items-center border w-auto p-1">
             <div className="flex items-center cursor-pointer justify-center hover:text-templatePrimary">
               {item?.quantity <= 1 ? (
                 <Trash

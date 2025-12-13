@@ -2,37 +2,52 @@
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 
+type SupportedCurrency = "USD" | "SAR" | "AED";
+
 export const useFormatAmount = () => {
   const { geoLocation } = useSelector((state: RootState) => state.geoLocation);
   const { globalSetting } = useSelector(
     (state: RootState) => state.globalSetting
   );
 
-  const isIndia = geoLocation?.countryName?.toLowerCase().trim() === "india";
-  const usdRate = globalSetting?.exchangeRate?.usd || 1;
+  const country = geoLocation?.countryName?.toLowerCase().trim();
 
-  // Formatted output with currency symbol
-  const formatAmount = (amount: number): string => {
-    let convertedAmount = amount;
-    let currency = "INR";
+  const exchangeRate = globalSetting?.exchangeRate;
 
-    if (isIndia) {
-      currency = "INR";
-    } else {
-      convertedAmount = amount * usdRate;
-    }
+  const getCurrencyByCountry = (): SupportedCurrency => {
+    if (country === "saudi arabia") return "SAR";
+    if (country === "united arab emirates") return "AED";
+    return "USD"; // default
+  };
 
-    return new Intl.NumberFormat("en-IN", {
+  const formatAmount = (amountInINR: number): string => {
+    const currency = getCurrencyByCountry();
+
+    const rateMap: Record<SupportedCurrency, number> = {
+      USD: exchangeRate?.usd ?? 1,
+      SAR: exchangeRate?.sar ?? 1,
+      AED: exchangeRate?.aed ?? 1,
+    };
+
+    const convertedAmount = amountInINR * rateMap[currency];
+
+    return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency,
       maximumFractionDigits: 2,
     }).format(convertedAmount);
   };
 
-  // Raw number (converted amount only)
-  const convertAmount = (amount: number): number => {
-    if (isIndia) return amount;
-    return Math.round(amount * usdRate * 100) / 100;
+  const convertAmount = (amountInINR: number): number => {
+    const currency = getCurrencyByCountry();
+
+    const rateMap: Record<SupportedCurrency, number> = {
+      USD: exchangeRate?.usd ?? 1,
+      SAR: exchangeRate?.sar ?? 1,
+      AED: exchangeRate?.aed ?? 1,
+    };
+
+    return Math.round(amountInINR * rateMap[currency] * 100) / 100;
   };
 
   return { formatAmount, convertAmount };

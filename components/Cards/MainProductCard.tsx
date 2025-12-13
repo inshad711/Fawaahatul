@@ -107,10 +107,11 @@ const MainProductCard: React.FC<Props> = ({ data }) => {
               {data?.gallery?.map((_, index) => (
                 <span
                   key={index}
-                  className={`h-[6px] w-[6px] rounded-full transition-all duration-300 ${currentIndex === index
-                    ? "bg-[#680116] scale-125"
-                    : "bg-gray-300"
-                    }`}
+                  className={`h-[6px] w-[6px] rounded-full transition-all duration-300 ${
+                    currentIndex === index
+                      ? "bg-[#680116] scale-125"
+                      : "bg-gray-300"
+                  }`}
                 ></span>
               ))}
             </div>
@@ -144,16 +145,18 @@ const MainProductCard: React.FC<Props> = ({ data }) => {
 
         <div>
           <div
-            className={`bg-white h-3 hidden lg:flex pointer-events-none lg:pointer-events-auto transition-all ease-in-out duration-200  w-full  gap-1 items-center justify-center p-1 ${isHovered ? "opacity-100" : "opacity-0"
-              }`}
+            className={`bg-white h-3 hidden lg:flex pointer-events-none lg:pointer-events-auto transition-all ease-in-out duration-200  w-full  gap-1 items-center justify-center p-1 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
           >
             {data?.gallery?.map((_, index) => (
               <span
                 key={index}
-                className={`h-[5px] w-[5px] rounded-full transition-all duration-300 ${currentIndex === index
-                  ? "bg-templateRed scale-125"
-                  : "bg-gray-300"
-                  }`}
+                className={`h-[5px] w-[5px] rounded-full transition-all duration-300 ${
+                  currentIndex === index
+                    ? "bg-templateRed scale-125"
+                    : "bg-gray-300"
+                }`}
               ></span>
             ))}
           </div>
@@ -204,20 +207,20 @@ const MainProductCard: React.FC<Props> = ({ data }) => {
             <>
               {data?.showRange?.min === data?.showRange?.max ? (
                 <>
-                  <span className="tracking-wider  text-[11px] font-normal md:text-sm  text-gray-700">
+                  <span className="tracking-wider  text-[11px] font-normal md:text-sm  text-templateText">
                     Starts from
                   </span>{" "}
-                  <span className="tracking-wider font-sans font-medium text-sm md:text-sm text-gray-700">
+                  <span className="tracking-wider font-sans font-medium text-sm md:text-sm text-templateText">
                     {formatAmount(data?.showRange?.min)}
                   </span>
                 </>
               ) : (
                 <div className="flex gap-2 font-sans items-center">
-                  <span className="tracking-wider text-sm md:text-base font-bold text-gray-700">
+                  <span className="tracking-wider text-sm md:text-base font-bold text-templateText">
                     {formatAmount(data?.showRange?.min)}
                   </span>
                   <span>-</span>
-                  <span className="tracking-wider text-sm md:text-base font-bold text-gray-700">
+                  <span className="tracking-wider text-sm md:text-base font-bold text-templateText">
                     {formatAmount(data?.showRange?.max)}
                   </span>
                 </div>
@@ -225,11 +228,11 @@ const MainProductCard: React.FC<Props> = ({ data }) => {
             </>
           ) : (
             <div className="flex gap-2 font-sans items-center">
-              <span className="tracking-wider text-sm md:text-sm font-medium text-[#242424]">
+              <span className="tracking-wider text-sm md:text-sm font-medium text-templateText">
                 {formatAmount(data?.sellingPrice)}
               </span>
               {data?.regularPrice > 0 && (
-                <span className="text-[0.7rem] md:text-xs line-through text-gray-500 tracking-wide">
+                <span className="text-[0.7rem] md:text-xs line-through text-templateText tracking-wide">
                   {formatAmount(data?.regularPrice)}
                 </span>
               )}

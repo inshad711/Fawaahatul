@@ -18,9 +18,9 @@ const AfterSearch: React.FC<Props> = ({
 }) => {
   return (
     <div className="flex flex-col lg:flex-row min-h-full lg:min-h-auto h-full w-full overflow-y-auto pb-36 lg:pb-0">
-      <div className="w-full lg:max-w-[200px] lg:min-w-[200px] bg-templateBackground p-4">
+      <div className="w-full lg:max-w-[200px] lg:min-w-[200px] bg-white p-4">
         <div className="space-y-4">
-          <h2 className="text-xs tracking-wide font-semibold text-templateText">
+          <h2 className="text-xs tracking-wide font-semibold text-black">
             Related Collections
           </h2>
           <hr />
@@ -44,7 +44,7 @@ const AfterSearch: React.FC<Props> = ({
       <div className="space-y-4 p-4 w-full">
         {results?.products ? (
           <>
-            <h2 className="text-xs tracking-wide font-semibold text-templateText">
+            <h2 className="text-xs tracking-wide font-semibold text-black">
               Search Results for{" "}
               <span className="text-templatePrimary underline text-red-500">
                 {query}

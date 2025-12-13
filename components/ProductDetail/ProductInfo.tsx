@@ -44,7 +44,7 @@ const ProductInfo: React.FC<productData> = ({ data }) => {
               </span>
             )}
         </div>
-        <span className="text-[0.7rem] pb-1 tracking-wider text-gray-500">
+        <span className="text-[0.7rem] pb-1 tracking-wider text-gray-300">
           Tax included. Shipping calculated at checkout.
         </span>
       </div>

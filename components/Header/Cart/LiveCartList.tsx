@@ -76,7 +76,7 @@ const LiveCartList: React.FC<LiveCartListProps> = ({ loading }) => {
             <div className="flex items-center justify-end p-2">
               <button
                 onClick={handleRemoveAll}
-                className="flex gap-1 items-center bg-gray-100 rounded text-xs tracking-wide px-2 py-1"
+                className="flex gap-1 items-center rounded text-xs tracking-wide px-2 py-1"
               >
                 <X size={14} color="gray" />
                 Remove all
@@ -106,14 +106,14 @@ const LiveCartList: React.FC<LiveCartListProps> = ({ loading }) => {
         </div>
 
         {/* Additional Info */}
-        <p className="text-xs text-center text-gray-500">
+        <p className="text-xs text-center text-gray-300">
           Shipping, taxes, and discount codes calculated at checkout.
         </p>
 
         {/* Checkout Button */}
         <button
           onClick={handleCheckout}
-          className="bg-templateText flex items-center justify-center gap-1 hover:opacity-90 tracking-wider text-white w-full py-2.5 rounded-full"
+          className="bg-white flex items-center justify-center gap-1 hover:opacity-90 tracking-wider text-black w-full py-2.5 rounded-full"
         >
           {checkingOut && (
             <LoaderCircle size={20} className="animate-spin" strokeWidth={1} />

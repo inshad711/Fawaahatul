@@ -88,12 +88,12 @@ const CardQuickView: React.FC<Props> = ({ slug }) => {
         {loading ? (
           <Loader />
         ) : productData ? (
-          <div className="templateContainer py-4 space-y-10">
+          <div className="templateContainer bg-templateBackground py-4 space-y-10">
             <div className="flex flex-col md:flex-row w-full lg:py-5 gap-5">
               <div className="w-full z-[1] sticky top-0 h-full lg:p-2 lg:w-[50%]">
                 <ProductGallery gallery={productData.gallery || []} />
               </div>
-              <div className="w-full lg:p-2 lg:w-[50%] space-y-5">
+              <div className="w-full  lg:p-2 lg:w-[50%] space-y-5">
                 <ProductTitle
                   quickView={true}
                   title={productData.name}
@@ -123,7 +123,7 @@ const CardQuickView: React.FC<Props> = ({ slug }) => {
                       </span>
                     ) : null}
                   </div>
-                  <span className="text-[0.7rem] pb-1 tracking-wide text-gray-500">
+                  <span className="text-[0.7rem] pb-1 tracking-wide text-gray-300">
                     Tax included. Shipping calculated at checkout.
                   </span>
                 </div>
@@ -155,7 +155,7 @@ const CardQuickView: React.FC<Props> = ({ slug }) => {
                 {/* <DetailPageFAQ /> */}
                 <div>
                   <Link
-                    className="text-xs text-templateRed hover:underline hover:text-templateRed flex items-center gap-2 font-medium tracking-wide"
+                    className="text-xs text-templateText hover:underline hover:text-templateRed flex items-center gap-2 font-medium tracking-wide"
                     href={"/products/" + productData.slug}
                   >
                     View full details{" "}

@@ -92,7 +92,7 @@ const CartList: React.FC<CartListProps> = ({ cartData, fetchCartData }) => {
           <div className="flex items-center justify-end p-2">
             <button
               onClick={handleRemoveAll}
-              className="flex gap-1 items-center bg-gray-100 rounded text-xs tracking-wide px-2 py-1"
+              className="flex gap-1 items-center  rounded text-xs tracking-wide px-2 py-1"
             >
               <X size={14} color="gray" />
               Remove all
@@ -101,10 +101,7 @@ const CartList: React.FC<CartListProps> = ({ cartData, fetchCartData }) => {
         )}
         <div>
           {cartData.map((item, index) => (
-            <div
-              key={index}
-              className="flex gap-2 hover:bg-gray-50 py-3 px-5 group"
-            >
+            <div key={index} className="flex gap-2 py-3 px-5 group">
               <div className="h-[70px] border w-[70px] overflow-hidden">
                 <ImageWithFallback
                   src={
@@ -126,7 +123,7 @@ const CartList: React.FC<CartListProps> = ({ cartData, fetchCartData }) => {
                 </h2>
                 <div className="flex items-center justify-between">
                   {/* Quantity Controls */}
-                  <div className="flex items-center border w-auto p-1 bg-white">
+                  <div className="flex items-center border w-auto p-1 bg-">
                     {/* Decrement Button */}
                     <div
                       onClick={() =>
@@ -199,7 +196,7 @@ const CartList: React.FC<CartListProps> = ({ cartData, fetchCartData }) => {
         </div>
 
         {/* Additional Info */}
-        <p className="text-xs text-center text-gray-500">
+        <p className="text-xs text-center text-gray-300">
           Shipping, taxes, and discount codes calculated at checkout.
         </p>
 
@@ -208,7 +205,7 @@ const CartList: React.FC<CartListProps> = ({ cartData, fetchCartData }) => {
           href={"/checkout"}
           className="block w-full active:scale-95 duration-200 transition-all ease-in-out"
         >
-          <button className="bg-templateText flex items-center justify-center gap-1 hover:opacity-90 tracking-wider text-white w-full py-2.5 rounded-full">
+          <button className="bg-white flex items-center justify-center gap-1 hover:opacity-90 tracking-wider text-black w-full py-2.5 rounded-full">
             {loading && (
               <LoaderCircle
                 size={20}

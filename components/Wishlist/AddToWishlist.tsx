@@ -95,7 +95,7 @@ const AddToWishlist: React.FC<Props> = ({ isInWishlist, itemId }) => {
     >
       <span
         className={`opacity-0 max-w-0 ${
-          isWishlisted ? "text-[#FF3E59]" : "text-templateText"
+          isWishlisted ? "text-[#FF3E59]" : "text-black"
         } font-semibold tracking-wide group-hover:mx-2 group-hover:opacity-100 group-hover:max-w-[300px] transition-all duration-500 ease-in-out overflow-hidden whitespace-nowrap`}
       >
         {isWishlisted ? "Wishlisted" : "Add To Wishlist"}

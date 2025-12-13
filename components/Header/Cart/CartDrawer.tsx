@@ -138,10 +138,11 @@ const CartDrawer: React.FC<Props> = ({ variation }) => {
           <>
             {cartTotal > 0 && (
               <span
-                className={`${variation === 1
-                  ? "bg-white text-templateText"
-                  : "bg-templateText text-white"
-                  } text-[11px] leading-none rounded-full h-5 w-5 flex items-center justify-center absolute -top-3 -right-2`}
+                className={`${
+                  variation === 1
+                    ? "bg-white text-black"
+                    : "bg-white text-black"
+                } text-[11px] leading-none rounded-full h-5 w-5 flex items-center justify-center absolute -top-3 -right-2`}
               >
                 {cartTotal}
               </span>
@@ -151,7 +152,7 @@ const CartDrawer: React.FC<Props> = ({ variation }) => {
           <>
             {localCartItems.length > 0 && (
               <span
-                className="bg-templateText text-white lg:text-[11px] leading-none rounded-full 
+                className="bg-templateText text-black lg:text-[11px] leading-none rounded-full 
             h-5 w-5 flex items-center justify-center absolute -top-2 -right-2"
               >
                 {noOfQuantityInCart}
@@ -169,7 +170,7 @@ const CartDrawer: React.FC<Props> = ({ variation }) => {
 
       {showCartDrawer && (
         <div
-          className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity ease-in-out duration-500`}
+          className={`fixed inset-0 bg-white/25 backdrop-blur-sm z-40 transition-opacity ease-in-out duration-500`}
           onClick={handleCartToggle}
         ></div>
       )}
@@ -177,8 +178,9 @@ const CartDrawer: React.FC<Props> = ({ variation }) => {
       {/* Cart Drawer */}
       <div
         className={`fixed h-full bottom-0 right-0 w-[90%] text-templateText md:w-[400px] !z-[9999999999999] bg-templateBackground shadow-lg 
-        transition-transform duration-500  ease-in-out transform ${showCartDrawer ? "translate-x-0" : "translate-x-full"
-          }`}
+        transition-transform duration-500  ease-in-out transform ${
+          showCartDrawer ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <div
           onClick={handleCartToggle}

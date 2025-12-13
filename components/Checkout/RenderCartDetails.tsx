@@ -53,7 +53,7 @@ const RenderCartDetails: React.FC<Props> = () => {
         <div className="w-full h-full py-8 space-y-2">
           <div className="flex items-center justify-center">
             <Image
-              src={"/assets/placeholders/emptycart.webp"}
+              src={"/assets/placeholders/nofound.webp"}
               alt="empty cart"
               height={150}
               width={150}
@@ -63,7 +63,7 @@ const RenderCartDetails: React.FC<Props> = () => {
             <h2 className="text-templateText text-center">
               Your cart is empty
             </h2>
-            <p className="text-xs text-center text-gray-500 tracking-wide font-medium">
+            <p className="text-xs text-center text-templateText tracking-wide font-medium">
               There is nothing in your bag. Let's add some items.
             </p>
           </div>
@@ -83,7 +83,7 @@ const RenderCartDetails: React.FC<Props> = () => {
       )}
 
       <hr />
-      <div className="space-y-3.5">
+      <div className="space-y-3.5 text-templateText">
         <div className="flex  items-center justify-between">
           <h2 className="text-sm lg:text-base">
             Subtotal {totalItems > 0 && <span>({totalItems} items)</span>}
@@ -116,7 +116,7 @@ const RenderCartDetails: React.FC<Props> = () => {
               Shipping Fee
               {/* <Info size={14} className="mt-1 text-gray-500" /> */}
             </h2>
-            <h2 className="text-gray-600 text-[13px] uppercase font-semibold tracking-wide">
+            <h2 className="text-templateText text-[13px] uppercase font-semibold tracking-wide">
               {showShippingMethod ? (
                 <>
                   {shippingRate?.calculated ? (
