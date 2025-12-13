@@ -1,0 +1,94 @@
+.blogDescriptionCSS {
+  padding: 20px 0px;
+  margin: 0 auto;
+}
+
+.blogDescriptionCSS h1,
+.blogDescriptionCSS h2,
+.blogDescriptionCSS h3,
+.blogDescriptionCSS h4,
+.blogDescriptionCSS h5,
+.blogDescriptionCSS h6 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.blogDescriptionCSS h1 {
+  font-size: 2.5rem;
+}
+
+.blogDescriptionCSS h2 {
+  font-size: 2rem;
+}
+
+.blogDescriptionCSS h3 {
+  font-size: 1.75rem;
+}
+
+.blogDescriptionCSS h4 {
+  font-size: 1.5rem;
+}
+
+.blogDescriptionCSS h5 {
+  font-size: 1.25rem;
+}
+
+.blogDescriptionCSS h6 {
+  font-size: 1rem;
+}
+
+.blogDescriptionCSS p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.blogDescriptionCSS ul,
+.blogDescriptionCSS ol {
+  padding-left: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.blogDescriptionCSS ul li,
+.blogDescriptionCSS ol li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  list-style: disc;
+}
+
+.blogDescriptionCSS strong,
+.blogDescriptionCSS b {
+}
+
+.blogDescriptionCSS em,
+.blogDescriptionCSS i {
+  font-style: italic;
+}
+
+.blogDescriptionCSS a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.blogDescriptionCSS a:hover {
+  text-decoration: underline;
+}
+
+.blogDescriptionCSS blockquote {
+  font-style: italic;
+  padding-left: 20px;
+  border-left: 4px solid #3498db;
+  margin: 20px 0;
+}
+
+.blogDescriptionCSS img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.blogDescriptionCSS hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 40px 0;
+}

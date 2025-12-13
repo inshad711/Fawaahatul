@@ -1,0 +1,37 @@
+/* Container for the lines */
+.announcement-lines {
+  display: flex;
+  flex-direction: column;
+  /* height: 34px; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Individual line styles */
+.line {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideUp calc(var(--lines) * 3s) linear infinite; /* Adjusted total duration based on the number of lines */
+}
+
+/* Animation for sliding up */
+@keyframes slideUp {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  25%,
+  45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
