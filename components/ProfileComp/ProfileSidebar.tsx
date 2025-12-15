@@ -119,9 +119,9 @@ const ProfileSidebar = ({ currentTab }: any) => {
             <button
               className={`w-full ${
                 currentTab === item.url
-                  ? "bg-templatePrimary text-templatePrimaryText"
-                  : ""
-              } lg:text-left flex items-center rounded-sm justify-center lg:justify-start gap-1 text-[0.8rem] text-center tracking-wide border lg:border-none p-3 hover:bg-templatePrimary hover:text-templatePrimaryText transition-all ease-in-out duration-200`}
+                  ? "bg-templateText text-templateBackground"
+                  : "text-templateText"
+              } lg:text-left flex items-center rounded-sm justify-center lg:justify-start gap-1 text-[0.8rem] text-center tracking-wide border lg:border-none p-3 hover:bg-templateText hover:text-templateBackground transition-all ease-in-out duration-200`}
             >
               {item.icon}
               {item.text}
@@ -131,7 +131,7 @@ const ProfileSidebar = ({ currentTab }: any) => {
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <button
-              className={`w-full bg-gray-200 transition-all ease-in-out duration-200  rounded-sm lg:text-left flex items-center justify-center text-templateText lg:justify-start gap-1  text-[0.8rem] text-center tracking-wide p-3 `}
+              className={`w-full bg-templateBackground transition-all ease-in-out duration-200  rounded-sm lg:text-left flex items-center justify-center text-templateText lg:justify-start gap-1  text-[0.8rem] text-center tracking-wide p-3 `}
             >
               <Power size={16} strokeWidth={1.5} />
               Logout

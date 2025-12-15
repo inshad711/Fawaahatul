@@ -94,7 +94,7 @@ const NewHeader: React.FC<Props> = ({
         ${
           variation === 1
             ? "relative w-full z-10 bg-transparent"
-            : "bg-templateBackground text-white relative z-10"
+            : "bg-templateBackground text-templateText relative z-10"
         }
         transition-all ease-in-out duration-300 text-templateText space-y-2 pt-3 pb-1 w-full 
       `}

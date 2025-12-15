@@ -102,7 +102,7 @@ const CartList: React.FC<CartListProps> = ({ cartData, fetchCartData }) => {
         <div>
           {cartData.map((item, index) => (
             <div key={index} className="flex gap-2 py-3 px-5 group">
-              <div className="h-[70px] border w-[70px] overflow-hidden">
+              <div className="h-[70px]  w-[70px] overflow-hidden">
                 <ImageWithFallback
                   src={
                     item?.image?.url

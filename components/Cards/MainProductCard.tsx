@@ -144,7 +144,7 @@ const MainProductCard: React.FC<Props> = ({ data }) => {
         </div>
 
         <div>
-          <div
+          {/* <div
             className={`bg-white h-3 hidden lg:flex pointer-events-none lg:pointer-events-auto transition-all ease-in-out duration-200  w-full  gap-1 items-center justify-center p-1 ${
               isHovered ? "opacity-100" : "opacity-0"
             }`}
@@ -159,7 +159,7 @@ const MainProductCard: React.FC<Props> = ({ data }) => {
                 }`}
               ></span>
             ))}
-          </div>
+          </div> */}
 
           {/* {data?.brandName && ( */}
           {/* <span className="text-gray-500 mb-[2px] tracking-wider text-[11.5px] font-semibold uppercase block">

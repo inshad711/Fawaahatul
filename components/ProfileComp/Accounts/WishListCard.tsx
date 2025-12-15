@@ -73,7 +73,7 @@ const WishListCard: React.FC<Props> = ({ data, wishlist, setWishlist }) => {
         href={`/products/${data.slug}`}
         className="block group h-full w-full "
       >
-        <div className="aspect-[3/3.5] overflow-hidden border">
+        <div className="aspect-[3/3.5] overflow-hidden ">
           <ImageWithFallback
             src={`${process.env.BACKBLAZE_URL}/${data.image.url}`}
             alt={data.image.alt || "Product Image"}
@@ -83,7 +83,7 @@ const WishListCard: React.FC<Props> = ({ data, wishlist, setWishlist }) => {
           />
         </div>
         <div className="p-2 space-y-1 lg:space-y-2">
-          <h2 className="tracking-wide line-clamp-1 mb-1 leading-normal  text-sm break-words">
+          <h2 className="tracking-wide line-clamp-1 mb-1 leading-normal text-templateText text-sm break-words">
             {data.title}
           </h2>
           <div className="flex flex-col-reverse lg:flex-row lg:gap-2 font-sans">

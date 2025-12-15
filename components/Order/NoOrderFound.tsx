@@ -7,7 +7,7 @@ const NoOrderFound = () => {
     <div className="w-full h-full p-5 space-y-4">
       <div className="flex items-center justify-center">
         <Image
-          src={"/assets/placeholders/emptycart.webp"}
+          src={"/assets/placeholders/nofound.webp"}
           alt="empty cart"
           height={150}
           width={150}

@@ -70,6 +70,7 @@ const ProductDetail: React.FC<Pageprops> = async ({ params, searchParams }) => {
   const variants = (await searchParams).variants;
 
   const data = await fetchProductDetails(product_slug, variants);
+  console.log(data);
 
   if (!data) {
     return <Product404 />;

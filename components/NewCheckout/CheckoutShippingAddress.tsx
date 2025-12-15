@@ -265,7 +265,10 @@ const CheckoutShippingAddress = () => {
           !cities?.length
         )}
         <div className="w-full space-y-1">
-          <Label htmlFor="postalCode" className="text-xs text-gray-600 block">
+          <Label
+            htmlFor="postalCode"
+            className="text-xs text-templateText block"
+          >
             Postal Code
           </Label>
           <InputNumber

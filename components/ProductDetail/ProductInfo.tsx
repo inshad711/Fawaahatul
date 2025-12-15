@@ -13,7 +13,7 @@ import { useFormatAmount } from "@/hooks/useFormatAmount";
 const ProductInfo: React.FC<productData> = ({ data }) => {
   const { formatAmount } = useFormatAmount();
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 text-templateText">
       <div className="">
         <ProductTitle
           title={data?.name}

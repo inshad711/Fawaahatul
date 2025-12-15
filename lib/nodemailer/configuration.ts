@@ -19,11 +19,11 @@ export async function send({
   body,
 }: SendMailOptions): Promise<SendMailResult> {
   const transporter: Transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
-    port: Number(process.env.EMAIL_PORT),
+    host: process.env.EMAIL_HOST || "",
+    port: Number(process.env.EMAIL_PORT || 0),
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+      user: process.env.EMAIL_USER || "",
+      pass: process.env.EMAIL_PASS || "",
     },
   });
 
@@ -36,7 +36,7 @@ export async function send({
   try {
     // Send email
     const sendResult = await transporter.sendMail({
-      from: `${name} <${process.env.EMAIL_USER}>`,
+      from: `${name} <${process.env.EMAIL_USER || ""}>`,
       to,
       subject,
       html: body,

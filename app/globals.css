@@ -337,7 +337,7 @@ body {
 }
 
 .productDescription p {
-  @apply text-[14px] text-templateText text-gray-600  tracking-wider;
+  @apply text-[14px] text-templateText tracking-wider;
 }
 
 .productDescription iframe {

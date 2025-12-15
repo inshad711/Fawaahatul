@@ -22,17 +22,18 @@ const HeaderAccountComp: React.FC<Props> = ({ variation }) => {
         <> */}
       {storedCustomerData ? (
         <Link href={"/account"}>
-          <div className="flex items-center gap-1 cursor-pointer ">
+          <div className="flex items-center gap-1  cursor-pointer ">
             <div className="max-h-5 max-w-5 ">
               <UserRound
-                color={variation === 1 ? "white" : "black"}
+                color={variation === 1 ? "white" : "white"}
                 className={`h-full w-full`}
                 strokeWidth={1.5}
               />
             </div>
             <h3
-              className={`hidden lg:block text-sm font-light tracking-wide ${variation === 1 ? "text-white" : "text-templateText"
-                }`}
+              className={`hidden lg:block text-sm font-light tracking-wide ${
+                variation === 1 ? "text-white" : "text-templateText"
+              }`}
             >
               {storedCustomerData?.first_name} {storedCustomerData?.last_name}
             </h3>

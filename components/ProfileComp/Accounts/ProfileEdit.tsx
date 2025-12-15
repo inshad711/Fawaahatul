@@ -51,10 +51,10 @@ const ProfileEdit: React.FC<Props> = ({ userData, setRefetch }) => {
 
   return (
     <>
-      <div className="inline-block underline">
+      <div className="inline-block  underline">
         <span
           onClick={() => setOpen(true)}
-          className="flex items-center gap-1 md:gap-1 text-sm text-gray-700 font-medium cursor-pointer hover:text-templateText"
+          className="flex items-center gap-1 md:gap-1 text-sm text-templateText font-medium cursor-pointer hover:text-templateText"
         >
           <Edit size={15} />
           Edit details
@@ -68,10 +68,8 @@ const ProfileEdit: React.FC<Props> = ({ userData, setRefetch }) => {
         footer={null}
         centered
       >
-        <div className="space-y-6">
-          <h2 className="text-lg text-templateText tracking-wide">
-            Update your details
-          </h2>
+        <div className="space-y-6 text-black">
+          <h2 className="text-lg tracking-wide">Update your details</h2>
           <Form
             form={form}
             onFinish={handleFinish}
